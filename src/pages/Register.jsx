@@ -27,7 +27,7 @@ export default function Register() {
           console.warn("updateProfile failed:", err);
         }
       }
-      // ✅ بعد التسجيل روح لصفحة اللوج إن
+
       navigate("/login", { replace: true });
     } catch (e) {
       console.error(e);
@@ -37,7 +37,7 @@ export default function Register() {
     }
   };
 
-  const canSubmit = !loading && email && password; // خلي اسم المستخدم اختياري لو حابب
+  const canSubmit = !loading && email && password; 
 
   return (
     <div className="container py-4" style={{ maxWidth: 420 }}>
@@ -52,7 +52,7 @@ export default function Register() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             disabled={loading}
-            placeholder="(اختياري)"
+            placeholder="(optional)"
           />
         </div>
 
